@@ -1,0 +1,49 @@
+{
+	"info": {
+		"_postman_id": "2009bec8-8e34-467e-8941-1d4d2968f7d6",
+		"name": "## Project #2 - API Testing - SOAP Project(ISOCodeCurrencyValidations)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46870850",
+		"_collection_link": "https://anujrajput-7274379.postman.co/workspace/Anuj-Rajput's-Workspace~1e760851-0311-47f3-8423-aca0d93b9ed7/collection/46870850-2009bec8-8e34-467e-8941-1d4d2968f7d6?action=share&source=collection_link&creator=46870850"
+	},
+	"item": [
+		{
+			"name": "TC#1 - POSITIVE",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml; charset=utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap:Envelope xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\r\n  <soap:Body>\r\n    <CurrencyName xmlns=\"http://www.oorsprong.org/websamples.countryinfo\">\r\n      <sCurrencyISOCode>INR</sCurrencyISOCode>\r\n    </CurrencyName>\r\n  </soap:Body>\r\n</soap:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso",
+					"host": [
+						"webservices",
+						"oorsprong",
+						"org"
+					],
+					"path": [
+						"websamples.countryinfo",
+						"CountryInfoService.wso"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
