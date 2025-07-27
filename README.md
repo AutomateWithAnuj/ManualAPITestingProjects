@@ -1,2 +1,2 @@
-# PostmanAPIProjects
-All my Postman API collections and enviornments
+# ManualAPITestingProjects
+A comprehensive collection of manual API testing projects built using Postman. Covers all core concepts, methods, and real-world use cases.
