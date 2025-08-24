@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "b8e1226b-45cf-4e57-9c59-f29b3d07852d",
+		"name": "## Project 11 - DataDrivenTesting - app.vwo.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46870850",
+		"_collection_link": "https://anujrajput-7274379.postman.co/workspace/Anuj-Rajput's-Workspace~1e760851-0311-47f3-8423-aca0d93b9ed7/collection/46870850-b8e1226b-45cf-4e57-9c59-f29b3d07852d?action=share&source=collection_link&creator=46870850"
+	},
+	"item": [
+		{
+			"name": "Login API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var responseJSON = pm.response.json();\r",
+							"\r",
+							"// Test to check the structure of the response body\r",
+							"pm.test(\"Response body contains expected properties\", function () {\r",
+							"    pm.expect(responseJSON).to.have.property('message');\r",
+							"    pm.expect(responseJSON).to.have.property('showCaptcha');\r",
+							"    pm.expect(responseJSON).to.have.property('captchaKey');\r",
+							"});\r",
+							"\r",
+							"// Test to check the types of the properties\r",
+							"pm.test(\"Response properties have correct types\", function () {\r",
+							"    pm.expect(responseJSON.message).to.be.a('string');\r",
+							"    pm.expect(responseJSON.showCaptcha).to.be.a('boolean');\r",
+							"    pm.expect(responseJSON.captchaKey).to.be.a('string');\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "dnt",
+						"value": "1"
+					},
+					{
+						"key": "origin",
+						"value": "https://app.vwo.com"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://app.vwo.com/"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Not;A=Brand\";v=\"99\", \"Google Chrome\";v=\"139\", \"Chromium\";v=\"139\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-gpc",
+						"value": "1"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Cookie",
+						"value": "ab.storage.userId.f9c2b69f-2136-44e0-a55a-dff72d99aa19=g%3AycKNWa5Gptaj7P8mCc0x6dTQzQQ2%7Ce%3Aundefined%7Cc%3A1753898078637%7Cl%3A1753898078652; ab.storage.deviceId.f9c2b69f-2136-44e0-a55a-dff72d99aa19=g%3Ae4ed80f8-7558-46d4-3db3-4d58857d179b%7Ce%3Aundefined%7Cc%3A1753898078659%7Cl%3A1753898078659; ab.storage.sessionId.f9c2b69f-2136-44e0-a55a-dff72d99aa19=g%3Ae39964a3-b7b0-b88e-37f8-aec7d99bd6b3%7Ce%3A1753902021059%7Cc%3A1753900221057%7Cl%3A1753900221059; _gcl_au=1.1.755129571.1756055672.1463301704.1756055933.1756055933; vwola=1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"{{email}}\",\r\n  \"password\": \"{{password}}\",\r\n  \"remember\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app.vwo.com/login",
+					"protocol": "https",
+					"host": [
+						"app",
+						"vwo",
+						"com"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "Generated from cURL: curl \"https://app.vwo.com/login\" \\\r\n  -H \"accept: */*\" \\\r\n  -H \"accept-language: en-US,en;q=0.9\" \\\r\n  -H \"content-type: application/json;charset=UTF-8\" \\\r\n  -H \"dnt: 1\" \\\r\n  -H \"origin: https://app.vwo.com\" \\\r\n  -H \"priority: u=1, i\" \\\r\n  -H \"referer: https://app.vwo.com/\" \\\r\n  -H \"sec-ch-ua: \\\"Not;A=Brand\\\";v=\\\"99\\\", \\\"Google Chrome\\\";v=\\\"139\\\", \\\"Chromium\\\";v=\\\"139\\\"\" \\\r\n  -H \"sec-ch-ua-mobile: ?0\" \\\r\n  -H \"sec-ch-ua-platform: \\\"Windows\\\"\" \\\r\n  -H \"sec-fetch-dest: empty\" \\\r\n  -H \"sec-fetch-mode: cors\" \\\r\n  -H \"sec-fetch-site: same-origin\" \\\r\n  -H \"sec-gpc: 1\" \\\r\n  -H \"user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36\" \\\r\n  -b \"ab.storage.userId.f9c2b69f-2136-44e0-a55a-dff72d99aa19=g%3AycKNWa5Gptaj7P8mCc0x6dTQzQQ2%7Ce%3Aundefined%7Cc%3A1753898078637%7Cl%3A1753898078652; ab.storage.deviceId.f9c2b69f-2136-44e0-a55a-dff72d99aa19=g%3Ae4ed80f8-7558-46d4-3db3-4d58857d179b%7Ce%3Aundefined%7Cc%3A1753898078659%7Cl%3A1753898078659; ab.storage.sessionId.f9c2b69f-2136-44e0-a55a-dff72d99aa19=g%3Ae39964a3-b7b0-b88e-37f8-aec7d99bd6b3%7Ce%3A1753902021059%7Cc%3A1753900221057%7Cl%3A1753900221059; _gcl_au=1.1.755129571.1756055672.1463301704.1756055933.1756055933; vwola=1\" \\\r\n  --data-raw '{\"username\":\"anuj1234@gmail.com\",\"password\":\"123\",\"remember\":false,\"recap\r\n"
+			},
+			"response": []
+		}
+	]
+}
