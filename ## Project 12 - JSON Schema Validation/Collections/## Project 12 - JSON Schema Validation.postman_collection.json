@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "e5ca9b20-2522-436d-9898-ecd0f061d8f1",
+		"name": "## Project 12 - JSON Schema Validation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46870850",
+		"_collection_link": "https://anujrajput-7274379.postman.co/workspace/Anuj-Rajput's-Workspace~1e760851-0311-47f3-8423-aca0d93b9ed7/collection/46870850-e5ca9b20-2522-436d-9898-ecd0f061d8f1?action=share&source=collection_link&creator=46870850"
+	},
+	"item": [
+		{
+			"name": "Booking - CreateBooking (cURL)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.bookingid).not.to.be.null;\r",
+							"});\r",
+							"\r",
+							"pm.globals.set(\"name\",\"Anuj\");\r",
+							"\r",
+							"console.log(pm.collectionVariables.get(\"cname\"));\r",
+							"\r",
+							"pm.environment.set(\"name2\",\"Anshul\");\r",
+							"\r",
+							"var l = 10;\r",
+							"console.log(l);\r",
+							"\r",
+							"var schema = {\r",
+							"  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"bookingid\": {\r",
+							"      \"type\": \"integer\"\r",
+							"    },\r",
+							"    \"booking\": {\r",
+							"      \"type\": \"object\",\r",
+							"      \"properties\": {\r",
+							"        \"firstname\": {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        \"lastname\": {\r",
+							"          \"type\": \"string\"\r",
+							"        },\r",
+							"        \"totalprice\": {\r",
+							"          \"type\": \"integer\"\r",
+							"        },\r",
+							"        \"depositpaid\": {\r",
+							"          \"type\": \"boolean\"\r",
+							"        },\r",
+							"        \"bookingdates\": {\r",
+							"          \"type\": \"object\",\r",
+							"          \"properties\": {\r",
+							"            \"checkin\": {\r",
+							"              \"type\": \"string\",\r",
+							"              \"format\": \"date\"\r",
+							"            },\r",
+							"            \"checkout\": {\r",
+							"              \"type\": \"string\",\r",
+							"              \"format\": \"date\"\r",
+							"            }\r",
+							"          },\r",
+							"          \"required\": [\"checkin\", \"checkout\"]\r",
+							"        },\r",
+							"        \"additionalneeds\": {\r",
+							"          \"type\": \"string\"\r",
+							"        }\r",
+							"      },\r",
+							"      \"required\": [\"firstname\", \"lastname\", \"totalprice\", \"depositpaid\", \"bookingdates\"]\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\"bookingid\", \"booking\"]\r",
+							"};\r",
+							"\r",
+							"pm.test('Schema is valid', function () {\r",
+							"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"{{$randomUserName}}\",\r\n    \"lastname\" : \"{{$randomLastName}}\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"{{$randomDateFuture}}\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/booking",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \\\r\n  https://restful-booker.herokuapp.com/booking \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"firstname\" : \"Jim\",\r\n    \"lastname\" : \"Brown\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Auth - CreateToken (cURL)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var schema = {\r",
+							"  \"title\": \"TokenSchema\",\r",
+							"  \"type\": \"object\",\r",
+							"  \"properties\": {\r",
+							"    \"token\": {\r",
+							"      \"type\": \"string\",\r",
+							"      \"default\": \"\"\r",
+							"    }\r",
+							"  },\r",
+							"  \"required\": [\"token\"]\r",
+							"};\r",
+							"\r",
+							"pm.test('Schema is valid', function () {\r",
+							"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://restful-booker.herokuapp.com/auth",
+					"protocol": "https",
+					"host": [
+						"restful-booker",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"auth"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \\\r\n  https://restful-booker.herokuapp.com/auth \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"username\" : \"admin\",\r\n    \"password\" : \"password123\"\r\n}'"
+			},
+			"response": []
+		}
+	]
+}
