@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "3f03100b-2ca3-4cfc-beea-9fd7fc1a8133",
+		"name": "## Project 13 - OAuth2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46870850",
+		"_collection_link": "https://anujrajput-7274379.postman.co/workspace/Anuj-Rajput's-Workspace~1e760851-0311-47f3-8423-aca0d93b9ed7/collection/46870850-3f03100b-2ca3-4cfc-beea-9fd7fc1a8133?action=share&source=collection_link&creator=46870850"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "27c5357c58973778ea6b91c3a3955fb34d7c2870",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/anujr/OneDrive/Pictures/Screenshots/Screenshot 2025-08-15 225316.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.imgur.com/3/upload",
+					"protocol": "https",
+					"host": [
+						"api",
+						"imgur",
+						"com"
+					],
+					"path": [
+						"3",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
