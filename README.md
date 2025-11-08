@@ -121,105 +121,6 @@ The repository serves as a complete guide for manual API testing practices, cove
 
 ---
 
-## 🗂 Complete Folder Structure
-
-```text
-ManualAPITestingProjects/
-│
-├── 📁 Project 1 – Number to Words (SOAP API)/
-│   ├── 📁 Collections/
-│   │   └── NumberToWordsValidations.postman_collection.json
-│   ├── 📁 Test-Cases/
-│   │   └── NumberToWords_TestCases.xlsx
-│   └── 📁 Test-Plan/
-│       └── NumberToWords_TestPlan.docx
-│
-├── 📁 Project 2 – Currency ISO Code Lookup (SOAP API)/
-│   └── 📁 Collections/
-│       └── ISOCodeCurrencyValidations.postman_collection.json
-│
-├── 📁 Project 3 – Book ISBN Lookup (SOAP API)/
-│   └── 📁 Collections/
-│       └── BooksISBNValidations.postman_collection.json
-│
-├── 📁 Project 4 - Restful Booker (REST API)/
-│   ├── 📁 Collections/
-│   │   ├── 📁 newman/
-│   │   └── RestfulBooker.postman_collection.json
-│   ├── 📁 Test-Cases/
-│   │   └── RestfulBooker_TestCases.xlsx
-│   └── 📁 Test-Plan/
-│       └── RestfulBooker_TestPlan.docx
-│
-├── 📁 Project 5 - Imgur API (REST API)/
-│   └── 📁 Collections/
-│       └── ImgurAPI.postman_collection.json
-│
-├── 📁 Project 6 - Restful Booker (REST API) ENV/
-│   ├── 📁 Collections/
-│   │   └── 📁 newman/
-│   ├── Project 6 - Restful Booker (REST API) ENV.postman_collection.json
-│   ├── Dev.postman_environment.json
-│   ├── QA.postman_environment.json
-│   ├── Prod.postman_environment.json
-│   ├── 📁 Test-Cases/
-│   │   └── RestfulBooker_TestCases.xlsx
-│   └── 📁 Test-Plan/
-│       └── RestfulBooker_TestPlan.docx
-│
-├── 📁 Project 7 - Test Cases - Restful Booker (REST API)/
-│   ├── 📁 Collections/
-│   │   └── 📁 newman/
-│   ├── Prod.postman_environment.json
-│   ├── 📁 Test-Cases/
-│   │   └── RestfulBooker_TestCases.xlsx
-│   └── 📁 Test-Plan/
-│       └── RestfulBooker_TestPlan.docx
-│
-├── 📁 Project 8 - CRUD Operation - Restful Booker (REST API)/
-│   ├── 📁 Collections/
-│   │   └── 📁 newman/
-│   ├── Prod.postman_environment.json
-│   ├── 📁 Test-Cases/
-│   │   └── RestfulBooker_TestCases.xlsx
-│   └── 📁 Test-Plan/
-│       └── RestfulBooker_TestPlan.docx
-│
-├── 📁 Project 9 MockAPI - Restful booker - By CMD/
-│   ├── 📁 Collections/
-│   │   └── 📁 newman/
-│   ├── Project 9 MockAPI - Restful booker - By CMD.postman_collection.json
-│   ├── Prod.postman_environment.json
-│   ├── 📁 Test-Cases/
-│   │   └── RestfulBooker_TestCases.xlsx
-│   └── 📁 Test-Plan/
-│       └── RestfulBooker_TestPlan.docx
-│
-├── 📁 Project 10 FakeAPI - Restful booker - By Postman/
-│   ├── 📁 Collections/
-│   │   └── 📁 newman/
-│   ├── Project 10 FakeAPI - Restful booker - By Postman.postman_collection.json
-│   ├── FakeENV.postman_environment.json
-│   ├── 📁 Test-Cases/
-│   │   └── RestfulBooker_TestCases.xlsx
-│   └── 📁 Test-Plan/
-│       └── RestfulBooker_TestPlan.docx
-│
-├── 📁 Project 11 - DataDrivenTesting - app.vwo.com/
-│   ├── 📁 Collections/
-│   ├── 📁 TestData/
-│   └── Project 11 - DataDrivenTesting - app.vwo.com.postman_collection.json
-│
-├── 📁 Project 12 - JSON Schema Validation/
-│   └── 📁 Collections/
-│
-├── 📁 Project 13 - OAuth2/
-│   └── 📁 Collections/
-│       └── Project 13 - OAuth2.postman_collection.json
-│
-├── README.md
-└── .gitignore
-
 # 🧩 Testing Concepts Covered
 
 | Category | Specific Concepts |
@@ -330,3 +231,103 @@ This project is licensed under the **MIT License**.
 **Author:** Anuj Rajput  
 **GitHub:** [AutomateWithAnuj](https://github.com/AutomateWithAnuj)  
 **Repository:** ManualAPITestingProjects
+
+
+## 🗂 Complete Folder Structure
+
+```text
+ManualAPITestingProjects/
+│
+├── 📁 Project 1 – Number to Words (SOAP API)/
+│   ├── 📁 Collections/
+│   │   └── NumberToWordsValidations.postman_collection.json
+│   ├── 📁 Test-Cases/
+│   │   └── NumberToWords_TestCases.xlsx
+│   └── 📁 Test-Plan/
+│       └── NumberToWords_TestPlan.docx
+│
+├── 📁 Project 2 – Currency ISO Code Lookup (SOAP API)/
+│   └── 📁 Collections/
+│       └── ISOCodeCurrencyValidations.postman_collection.json
+│
+├── 📁 Project 3 – Book ISBN Lookup (SOAP API)/
+│   └── 📁 Collections/
+│       └── BooksISBNValidations.postman_collection.json
+│
+├── 📁 Project 4 - Restful Booker (REST API)/
+│   ├── 📁 Collections/
+│   │   ├── 📁 newman/
+│   │   └── RestfulBooker.postman_collection.json
+│   ├── 📁 Test-Cases/
+│   │   └── RestfulBooker_TestCases.xlsx
+│   └── 📁 Test-Plan/
+│       └── RestfulBooker_TestPlan.docx
+│
+├── 📁 Project 5 - Imgur API (REST API)/
+│   └── 📁 Collections/
+│       └── ImgurAPI.postman_collection.json
+│
+├── 📁 Project 6 - Restful Booker (REST API) ENV/
+│   ├── 📁 Collections/
+│   │   └── 📁 newman/
+│   ├── Project 6 - Restful Booker (REST API) ENV.postman_collection.json
+│   ├── Dev.postman_environment.json
+│   ├── QA.postman_environment.json
+│   ├── Prod.postman_environment.json
+│   ├── 📁 Test-Cases/
+│   │   └── RestfulBooker_TestCases.xlsx
+│   └── 📁 Test-Plan/
+│       └── RestfulBooker_TestPlan.docx
+│
+├── 📁 Project 7 - Test Cases - Restful Booker (REST API)/
+│   ├── 📁 Collections/
+│   │   └── 📁 newman/
+│   ├── Prod.postman_environment.json
+│   ├── 📁 Test-Cases/
+│   │   └── RestfulBooker_TestCases.xlsx
+│   └── 📁 Test-Plan/
+│       └── RestfulBooker_TestPlan.docx
+│
+├── 📁 Project 8 - CRUD Operation - Restful Booker (REST API)/
+│   ├── 📁 Collections/
+│   │   └── 📁 newman/
+│   ├── Prod.postman_environment.json
+│   ├── 📁 Test-Cases/
+│   │   └── RestfulBooker_TestCases.xlsx
+│   └── 📁 Test-Plan/
+│       └── RestfulBooker_TestPlan.docx
+│
+├── 📁 Project 9 MockAPI - Restful booker - By CMD/
+│   ├── 📁 Collections/
+│   │   └── 📁 newman/
+│   ├── Project 9 MockAPI - Restful booker - By CMD.postman_collection.json
+│   ├── Prod.postman_environment.json
+│   ├── 📁 Test-Cases/
+│   │   └── RestfulBooker_TestCases.xlsx
+│   └── 📁 Test-Plan/
+│       └── RestfulBooker_TestPlan.docx
+│
+├── 📁 Project 10 FakeAPI - Restful booker - By Postman/
+│   ├── 📁 Collections/
+│   │   └── 📁 newman/
+│   ├── Project 10 FakeAPI - Restful booker - By Postman.postman_collection.json
+│   ├── FakeENV.postman_environment.json
+│   ├── 📁 Test-Cases/
+│   │   └── RestfulBooker_TestCases.xlsx
+│   └── 📁 Test-Plan/
+│       └── RestfulBooker_TestPlan.docx
+│
+├── 📁 Project 11 - DataDrivenTesting - app.vwo.com/
+│   ├── 📁 Collections/
+│   ├── 📁 TestData/
+│   └── Project 11 - DataDrivenTesting - app.vwo.com.postman_collection.json
+│
+├── 📁 Project 12 - JSON Schema Validation/
+│   └── 📁 Collections/
+│
+├── 📁 Project 13 - OAuth2/
+│   └── 📁 Collections/
+│       └── Project 13 - OAuth2.postman_collection.json
+│
+├── README.md
+└── .gitignore
