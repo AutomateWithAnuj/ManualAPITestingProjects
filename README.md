@@ -157,82 +157,6 @@ newman run "collection.json" -e "environment.json"
 # Run with reporters
 newman run "collection.json" -r htmlextra,json
 
-# 📊 Documentation Structure
-
-Each major project includes:
-
----
-
-## 📋 **Test Plan Document**
-
-- **Testing objectives and scope**  
-- **Test strategy and approach**  
-- **Resource requirements**  
-- **Schedule and deliverables**  
-- **Risk assessment**
-
----
-
-## 📝 **Test Cases (Excel)**
-
-- **Test case ID and description**  
-- **Preconditions and test steps**  
-- **Expected vs actual results**  
-- **Test data requirements**  
-- **Pass/fail status tracking**
-
----
-
-## 🔄 **Postman Collections**
-
-- **Organized API requests**  
-- **Test scripts and assertions**  
-- **Environment variables**  
-- **Pre-request scripts**  
-- **Collection-level variables**
-
----
-
-## 🌍 **Environment Configurations**
-
-- **Base URLs and endpoints**  
-- **Authentication tokens**  
-- **Environment-specific variables**  
-- **Headers and parameters**
-
----
-
-## 🎯 **Learning Path**
-
-- **Start with SOAP APIs** → Projects 1–3 for SOAP web services  
-- **Move to REST Basics** → Project 4 for fundamental REST API testing  
-- **Environment Testing** → Project 6 for multi-environment setups  
-- **Advanced Concepts** → Projects 7–8 for comprehensive testing  
-- **Mock & Fake APIs** → Projects 9–10 for simulated environments  
-- **Specialized Testing** → Projects 11–13 for data-driven, schema, and OAuth2 testing
-
----
-
-## 🤝 **Contributing**
-
-Contributions are welcome!  
-Please feel free to submit pull requests or open issues for improvements in test cases, collections, or documentation.
-
----
-
-## 📜 **License**
-
-This project is licensed under the **MIT License**.
-
----
-
-## 📞 **Contact**
-
-**Author:** Anuj Rajput  
-**GitHub:** [AutomateWithAnuj](https://github.com/AutomateWithAnuj)  
-**Repository:** ManualAPITestingProjects
-
-
 ## 🗂 Complete Folder Structure
 
 ```text
@@ -331,3 +255,79 @@ ManualAPITestingProjects/
 │
 ├── README.md
 └── .gitignore
+
+
+# 📊 Documentation Structure
+
+Each major project includes:
+
+---
+
+## 📋 **Test Plan Document**
+
+- **Testing objectives and scope**  
+- **Test strategy and approach**  
+- **Resource requirements**  
+- **Schedule and deliverables**  
+- **Risk assessment**
+
+---
+
+## 📝 **Test Cases (Excel)**
+
+- **Test case ID and description**  
+- **Preconditions and test steps**  
+- **Expected vs actual results**  
+- **Test data requirements**  
+- **Pass/fail status tracking**
+
+---
+
+## 🔄 **Postman Collections**
+
+- **Organized API requests**  
+- **Test scripts and assertions**  
+- **Environment variables**  
+- **Pre-request scripts**  
+- **Collection-level variables**
+
+---
+
+## 🌍 **Environment Configurations**
+
+- **Base URLs and endpoints**  
+- **Authentication tokens**  
+- **Environment-specific variables**  
+- **Headers and parameters**
+
+---
+
+## 🎯 **Learning Path**
+
+- **Start with SOAP APIs** → Projects 1–3 for SOAP web services  
+- **Move to REST Basics** → Project 4 for fundamental REST API testing  
+- **Environment Testing** → Project 6 for multi-environment setups  
+- **Advanced Concepts** → Projects 7–8 for comprehensive testing  
+- **Mock & Fake APIs** → Projects 9–10 for simulated environments  
+- **Specialized Testing** → Projects 11–13 for data-driven, schema, and OAuth2 testing
+
+---
+
+## 🤝 **Contributing**
+
+Contributions are welcome!  
+Please feel free to submit pull requests or open issues for improvements in test cases, collections, or documentation.
+
+---
+
+## 📜 **License**
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 📞 **Contact**
+
+**Author:** Anuj Rajput  
+**GitHub:** [AutomateWithAnuj](https://github.com/AutomateWithAnuj)  
+**Repository:** ManualAPITestingProjects
